@@ -37,4 +37,4 @@ def test_get_event_by_id():
     # Obtém o evento do banco de dados pelo seu ID e imprime a resposta e o título do evento
     response = events_repository.get_event_by_id(test_event_id)
     print(response)
-    print(response.title)
+    # print(response.title)
