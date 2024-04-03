@@ -37,7 +37,7 @@ cd AppPython
 ```bash
 pip install -r requirements.txt
 ```
-### Usage :computer:
+## Usage :computer:
 After installation, you can run the application using Python. Replace app.py with the name of your main script file if it's different.
 ```python
 python app.py
