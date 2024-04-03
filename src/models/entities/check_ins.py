@@ -1,15 +1,15 @@
-# Este arquivo define a estrutura da tabela de checkins
+# Este arquivo define a estrutura da tabela de check_ins
 from src.models.settings.base import Base
 from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
 from sqlalchemy.sql import func
 
-# Define a classe Checkins, que representa a tabela de checkins no banco de dados
+# Define a classe Checkins, que representa a tabela de check_ins no banco de dados
 
 
-class Checkins(Base):
-    __tablename__ = "checkins"
+class CheckIns(Base):
+    __tablename__ = "check_ins"
 
-    # Colunas da tabela de checkins
+    # Colunas da tabela de check_ins
     id = Column(Integer, primary_key=True, autoincrement=True)
     created_at = Column(DateTime, nullable=False, default=func.now())
     attendeeId = Column(String, ForeignKey("attendees.id"), nullable=False)
