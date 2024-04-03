@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 ### Usage :computer:
 After installation, you can run the application using Python. Replace app.py with the name of your main script file if it's different.
-```bash
+```python
 python app.py
 ```
 
