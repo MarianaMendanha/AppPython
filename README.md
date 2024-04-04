@@ -2,13 +2,20 @@
 
 ## Description :page_facing_up:
 
-AppPython is a back-end application developed during the Rocketseat NLW Unite event. It's built entirely in Python, focusing on delivering a back-end solution for web applications. This project demonstrates best practices in Python development, including clean code, application structure, and integrations with external services.
+AppPython is a back-end application developed during the Rocketseat NLW Unite event. It's built entirely in Python using Flask, focusing on delivering a back-end solution for web applications. This project demonstrates best practices in Python development, including clean code, application structure, and integrations with external services. The application is designed for event registration and check-in, leveraging SQLite as the database.
 
 ## Features :star:
 
-- Comprehensive back-end logic in Python.
-- Examples of RESTful API design.
-- Integration with databases and external APIs.
+- [x] Comprehensive back-end logic in Python.
+- [x] Example of RESTful API design.
+- [x] Integration with databases and external APIs.
+- [x] Create event
+- [x] Get event by ID
+- [x] Create attendee with event ID
+- [x] Get attendee badge with attendee ID
+- [x] Get event attendees with event ID
+- [x] Create check-in with attendee ID
+- [x] Error handling
 
 ## How It Works :gear:
 
