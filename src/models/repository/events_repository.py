@@ -4,6 +4,7 @@ from src.models.entities.events import Events
 from src.models.entities.attendees import Attendees
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.exc import NoResultFound
+from src.errors.error_types.http_conflict import HttpConflictError
 
 # Esta classe fornece métodos para interagir com a tabela de eventos no banco de dados (Querys para banco)
 
@@ -31,7 +32,7 @@ class EventsRepository:
                 return eventsInfo
 
             except IntegrityError:
-                raise Exception('Evento ja cadastrado!')
+                raise HttpConflictError('Evento ja cadastrado!')
 
             except Exception as exception:
                 database.session.rollback()

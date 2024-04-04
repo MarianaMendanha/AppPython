@@ -3,6 +3,7 @@ from src.models.settings.connection import db_connection_handler
 from src.models.entities.check_ins import CheckIns
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.exc import NoResultFound
+from src.errors.error_types.http_conflict import HttpConflictError
 
 # Esta classe fornece métodos para interagir com a tabela de check_ins no banco de dados
 
@@ -26,7 +27,7 @@ class CheckInsRepository:
                 return attendee_id
 
             except IntegrityError:
-                raise Exception('Checkin já foi feito!')
+                raise HttpConflictError('Checkin já foi feito!')
 
             except Exception as exception:
                 database.session.rollback()
